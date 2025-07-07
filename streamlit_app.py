@@ -174,6 +174,6 @@ st.sidebar.markdown("""
     </style>
 
     <div class="footer">
-        Made with ❤️ by <b>Chaitanya Joshi</b>
+        Made with ❤️ by <b><a href="https://github.com/chai200703" target="_blank">Chaitanya Joshi</b>
     </div>
 """, unsafe_allow_html=True)

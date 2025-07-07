@@ -1,6 +1,6 @@
 # 🎥 Face Recognition Attendance System
 
-[![View on GitHub](https://img.shields.io/badge/GitHub-View%20Project-blue?logo=github)](https://github.com/yourusername/face-attendance-system)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View%20Project-blue?logo=github)](https://github.com/chai200703/face-attendance-system)
 
 A real-time face recognition-based attendance system built with **Python**, **OpenCV**, **Face Recognition library**, and **Streamlit**. It detects known faces from a webcam and marks their attendance in a **SQLite database**.
 

@@ -1,17 +1,21 @@
 # 🎥 Face Recognition Attendance System
 
-This is a real-time attendance system using face recognition, built with Python, OpenCV, and Streamlit.
+[![View on GitHub](https://img.shields.io/badge/GitHub-View%20Project-blue?logo=github)](https://github.com/yourusername/face-attendance-system)
 
-## 🔧 Features
+A real-time face recognition-based attendance system built with **Python**, **OpenCV**, **Face Recognition library**, and **Streamlit**. It detects known faces from a webcam and marks their attendance in a **SQLite database**.
 
-- Admin panel to add new faces
-- User attendance via face recognition
-- SQLite-based log storage
-- View/delete attendance logs
-- Streamlit UI for web interface
+---
 
-## 🚀 How to Run
+## 🚀 Features
 
-```bash
-pip install -r requirements.txt
-streamlit run streamlit_app.py
+- 👨‍💼 **Admin Panel**: Add new user faces and manage logs  
+- 🧑‍💻 **User View**: Shows personalized attendance records  
+- 📸 **Real-time face recognition** using webcam  
+- 📁 **Attendance logs** stored in SQLite and viewable as table  
+- 🧹 Delete logs (today's, all, or by name)  
+- ✅ Simple and clean UI using Streamlit
+
+---
+
+## 📂 Project Structure
+

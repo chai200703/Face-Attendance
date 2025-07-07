@@ -21,10 +21,11 @@ def start_attendance_system():
 
         face_locations=frecog.face_locations(rgb_small_frame)
         face_encodings=frecog.face_encodings(rgb_small_frame, face_locations)
-        kface_encodings,kface_names=face_utils.load_known_faces()
+        kface_encodings,kface_names=face_utils.load_known_faces("datasets")
         students=kface_names.copy()
 
         for face_encoding in face_encodings:
+            name=None
             matches=frecog.compare_faces(kface_encodings,face_encoding)
             face_distance=frecog.face_distance(kface_encodings,face_encoding)
             best_match_index=np.argmin(face_distance)

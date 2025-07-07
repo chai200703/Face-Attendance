@@ -16,16 +16,19 @@ def delete_today_logs():
     conn = db.connect("attendance.db", check_same_thread=False)
     today = datetime.now().strftime("%Y-%m-%d")
     conn.execute("DELETE FROM attendance WHERE date = ?", (today,))
+    conn.commit()
     conn.close()
 
 def delete_all_logs():
     conn = db.connect("attendance.db", check_same_thread=False)
     conn.execute("DELETE FROM attendance")
+    conn.commit()
     conn.close()
     
 def delete_logs_by_name(name):
     conn = db.connect("attendance.db", check_same_thread=False)
     conn.execute("DELETE FROM attendance WHERE name = ?",(name,))
+    conn.commit()
     conn.close()
 
 def get_today_logs():

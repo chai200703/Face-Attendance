@@ -1,3 +1,4 @@
+import os
 import face_recognition as frecog
 from datetime import datetime
 import sqlite3 as db
@@ -14,19 +15,23 @@ cursor.execute("""
 """)
 conn.commit()
 
-def load_known_faces():
-    dipanshu_image= frecog.load_image_file(r"datasets/dipanshu.jpg")
-    dipanshu_encoding=frecog.face_encodings(dipanshu_image)[0]
+def load_known_faces(folder="datasets"):
+    known_encodings = []
+    known_names = []
 
-    chaitanya_image=frecog.load_image_file(r"datasets\chaitanya.jpg")
-    chaitanya_encoding=frecog.face_encodings(chaitanya_image)[0]
+    for filename in os.listdir(folder):
+        if filename.lower().endswith((".jpg", ".jpeg", ".png")):
+            image_path = os.path.join(folder, filename)
+            image = frecog.load_image_file(image_path)
+            encodings = frecog.face_encodings(image)
 
-    navneet_image=frecog.load_image_file(r"datasets\navneet.jpg")
-    navneet_encoding=frecog.face_encodings(navneet_image)[0]
+            if encodings:
+                known_encodings.append(encodings[0])
+                known_names.append(os.path.splitext(filename)[0])
+            else:
+                print(f"No face found in {filename} — skipping.")
 
-    kface_encodings=[dipanshu_encoding,chaitanya_encoding,navneet_encoding]
-    kface_names=["Dipanshu","Chaitanya","Navneet"]
-    return kface_encodings,kface_names
+    return known_encodings, known_names
 
 def mark_attendance(name):
     now = datetime.now()

@@ -1,0 +1,5 @@
+__pycache__/
+attendance.db
+*.pyc
+.DS_Store
+datasets/*.jpg

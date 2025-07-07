@@ -18,4 +18,12 @@ A real-time face recognition-based attendance system built with **Python**, **Op
 ---
 
 ## 📂 Project Structure
-
+face-attendance-system/
+│
+├── streamlit_app.py # Main app interface
+├── face_utils.py # Face encoding & recognition logic
+├── db_utils.py # Database operations (view/delete logs)
+├── datasets/ # Stored face images
+├── attendance.db # SQLite DB (excluded via .gitignore)
+├── requirements.txt
+└── README.md

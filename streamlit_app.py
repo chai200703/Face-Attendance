@@ -159,3 +159,21 @@ elif menu == "Admin":
 
     elif admin_pass:
         st.error("Incorrect password")
+
+st.sidebar.markdown("""
+    <style>
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        font-size: 14px;
+        color: #999999;
+    }
+    </style>
+
+    <div class="footer">
+        Made with ❤️ by <b>Chaitanya Joshi</b>
+    </div>
+""", unsafe_allow_html=True)
